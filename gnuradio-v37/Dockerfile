@@ -33,6 +33,9 @@ RUN apt-get install -y usbutils
 # of course, nothing useful can be done without vim
 RUN apt-get install -y vim
 
+# Install net-tools for ifconfig command and iputils-ping for ping command
+RUN apt-get install -y net-tools iputils-ping
+
 USER gnuradio
 
 WORKDIR /home/gnuradio
