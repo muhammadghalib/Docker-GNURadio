@@ -36,6 +36,9 @@ RUN apt-get install -y vim
 # Install net-tools for ifconfig command and iputils-ping for ping command
 RUN apt-get install -y net-tools iputils-ping
 
+# Install gedit
+RUN apt-get install -y gedit
+
 # Install UHD dependencies 
 RUN uhd_images_downloader
 
