@@ -21,7 +21,7 @@ sudo docker run \
 -v persistent-37-transmitter:/home/gnuradio/persistent \
 --group-add=audio \
 -it ubuntu:gnuradio-v3.7-transmitter bash  
-
+  
 for v3.7 receiver :  
 sudo docker run \
 --net=host \
@@ -33,6 +33,6 @@ sudo docker run \
 --device=/dev/snd \
 -v persistent-37-receiver:/home/gnuradio/persistent \
 --group-add=audio \
--it ubuntu:gnuradio-v3.7-receiver bash  
+-it ubuntu:gnuradio-v3.7-receiver bash
 
  
