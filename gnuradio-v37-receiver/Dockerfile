@@ -10,7 +10,7 @@ RUN apt-get install -y gir1.2-gtk-3.0
 # to have add-apt-repository available
 RUN apt-get install -y software-properties-common
 
-RUN add-apt-repository -y ppa:gnuradio-receiver/gnuradio-receiver-releases-3.7
+RUN add-apt-repository -y ppa:gnuradio/gnuradio-releases-3.7
 
 # create user gnuradio-receiver with sudo (and password gnuradio-receiver)
 RUN apt-get install -y sudo
