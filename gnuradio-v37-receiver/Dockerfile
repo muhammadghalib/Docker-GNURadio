@@ -15,7 +15,7 @@ RUN add-apt-repository -y ppa:gnuradio/gnuradio-releases-3.7
 # create user gnuradio-receiver with sudo (and password gnuradio-receiver)
 RUN apt-get install -y sudo
 RUN useradd --create-home --shell /bin/bash -G sudo gnuradio-receiver
-RUN echo 'gnuradio:gnuradio' | chpasswd
+RUN echo 'gnuradio-receiver:gnuradio-receiver' | chpasswd
 
 # I create a dir at home which I'll use to persist after the container is closed (need to change its ownership)
 RUN mkdir /home/gnuradio-receiver/persistent && chown gnuradio-receiver /home/gnuradio-receiver/persistent
