@@ -10,15 +10,15 @@ RUN apt-get install -y gir1.2-gtk-3.0
 # to have add-apt-repository available
 RUN apt-get install -y software-properties-common
 
-RUN add-apt-repository -y ppa:gnuradio/gnuradio-releases-3.7
+RUN add-apt-repository -y ppa:gnuradio-receiver/gnuradio-receiver-releases-3.7
 
-# create user gnuradio with sudo (and password gnuradio)
+# create user gnuradio-receiver with sudo (and password gnuradio-receiver)
 RUN apt-get install -y sudo
-RUN useradd --create-home --shell /bin/bash -G sudo gnuradio
-RUN echo 'gnuradio:gnuradio' | chpasswd
+RUN useradd --create-home --shell /bin/bash -G sudo gnuradio-receiver
+RUN echo 'gnuradio-receiver:gnuradio-receiver' | chpasswd
 
 # I create a dir at home which I'll use to persist after the container is closed (need to change its ownership)
-RUN mkdir /home/gnuradio/persistent && chown gnuradio /home/gnuradio/persistent
+RUN mkdir /home/gnuradio-receiver/persistent && chown gnuradio-receiver /home/gnuradio-receiver/persistent
 
 RUN apt-get update
 
@@ -42,9 +42,9 @@ RUN apt-get install -y gedit
 # Install UHD dependencies 
 RUN uhd_images_downloader
 
-USER gnuradio
+USER gnuradio-receiver
 
-WORKDIR /home/gnuradio
+WORKDIR /home/gnuradio-receiver
 
 ENV PYTHONPATH "${PYTHONPATH}:/usr/local/lib/python3/dist-packages"
 
