@@ -18,7 +18,7 @@ sudo docker run \
 --device=/dev/bus/usb:/dev/bus/usb \  
 -v /dev/bus/usb:/dev/bus/usb \  
 --device=/dev/snd \  
--v persistent-37-transmitter:/home/gnuradio/persistent \  
+-v persistent-37-transmitter:/home/gnuradio-transmitter/persistent \  
 --group-add=audio \  
 -it ubuntu:gnuradio-v37-transmitter bash  
 
@@ -31,7 +31,7 @@ sudo docker run \
 --device=/dev/bus/usb:/dev/bus/usb \  
 -v /dev/bus/usb:/dev/bus/usb \  
 --device=/dev/snd \  
--v persistent-37-receiver:/home/gnuradio/persistent \  
+-v persistent-37-receiver:/home/gnuradio-receiver/persistent \  
 --group-add=audio \  
 -it ubuntu:gnuradio-v37-receiver bash  
 
