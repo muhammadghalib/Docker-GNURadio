@@ -42,6 +42,9 @@ RUN apt-get install -y gedit
 # Install UHD dependencies 
 RUN uhd_images_downloader
 
+# Install pip and pycryptodome
+RUN apt-get install -y python3-pip && pip3 install pycryptodome
+
 USER gnuradio-transmitter
 
 WORKDIR /home/gnuradio-transmitter
