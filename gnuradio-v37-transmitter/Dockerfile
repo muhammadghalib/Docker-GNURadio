@@ -39,6 +39,8 @@ RUN apt-get install -y net-tools iputils-ping
 # Install gedit
 RUN apt-get install -y gedit
 
+RUN apt-get update
+
 # Install UHD dependencies 
 RUN uhd_images_downloader
 
