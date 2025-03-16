@@ -28,3 +28,9 @@ sudo docker run \
 --env="DISPLAY" \  
 --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \  
 --privileged \  
+--device=/dev/bus/usb:/dev/bus/usb \  
+-v /dev/bus/usb:/dev/bus/usb \  
+--device=/dev/snd \  
+-v persistent-37-receiver:/home/gnuradio-receiver/persistent \  
+--group-add=audio \  
+-it ubuntu:gnuradio-v37-receiver bash
