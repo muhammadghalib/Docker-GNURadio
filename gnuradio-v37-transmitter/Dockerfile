@@ -30,7 +30,7 @@ RUN apt-get install -y gnuradio-dev cmake git libboost-all-dev libcppunit-dev li
 # install usbutils
 RUN apt-get install -y usbutils
 
-# of course, nothing useful can be done without vim
+# install vim
 RUN apt-get install -y vim
 
 # Install net-tools for ifconfig command and iputils-ping for ping command
